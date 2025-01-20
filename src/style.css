@@ -153,3 +153,27 @@ img {
     margin: 5px 0;
   }
 }
+/* Base style for zoomable images */
+.zoomable {
+  cursor: pointer;
+  transition: transform 0.3s ease, z-index 0.3s ease;
+  image-rendering: auto; /* Ensure good scaling */
+  image-rendering: crisp-edges; /* Ensures sharper edges during zoom */
+  image-rendering: high-quality; /* Ensures high quality rendering */
+  object-fit: contain; /* Adjust image fit */
+}
+
+/* Zoom effect */
+.zoomable.zoom-in {
+  transform: scale(2); /* Adjust scale as needed */
+  z-index: 1000;
+  position: relative;
+  outline: 2px solid #ffffff; /* Optional: Highlight the zoomed image */
+}
+
+/* Optional: Blur the rest of the page */
+body.zoomed-in {
+  overflow: hidden; /* Prevent scrolling */
+  filter: blur(2px); /* Blur the background when zooming */
+  transition: filter 0.3s ease-in-out;
+}

@@ -40,7 +40,7 @@ document.querySelector("#app").innerHTML = `
           <div id="images">
             ${cadavre
               .map(
-                (cadavre, index) => `<img src="${cadavre}" alt="cadavre${index + 1}" />`
+                (cadavre, index) => `<img src="${cadavre}" alt="cadavre${index + 1}" class="zoomable" />`
               )
               .join("")}
           </div>
@@ -102,6 +102,32 @@ document.querySelector("#app").innerHTML = `
     </ul>
   </main>
 `;
+
+// Add event listeners for zoom functionality
+document.addEventListener("DOMContentLoaded", function () {
+  const zoomableImages = document.querySelectorAll(".zoomable");
+
+  zoomableImages.forEach((image) => {
+    image.addEventListener("click", function () {
+      if (this.classList.contains("zoom-in")) {
+        this.classList.remove("zoom-in");
+        document.body.classList.remove("zoomed-in");
+      } else {
+        zoomableImages.forEach((img) => img.classList.remove("zoom-in")); // Reset others
+        this.classList.add("zoom-in");
+        document.body.classList.add("zoomed-in");
+      }
+    });
+  });
+
+  // Close zoom when clicking outside the image
+  document.addEventListener("click", (e) => {
+    if (!e.target.classList.contains("zoomable")) {
+      zoomableImages.forEach((img) => img.classList.remove("zoom-in"));
+      document.body.classList.remove("zoomed-in");
+    }
+  });
+});
 
 // Create three.js scenes for each
 createThreeScene("#model1", "/3DModels/project1/cube.obj");
