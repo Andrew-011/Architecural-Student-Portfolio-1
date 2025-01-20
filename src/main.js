@@ -17,6 +17,7 @@ const trees = [
 ];
 
 const cadavre = [
+  "./cadavreDrawings/cadavre1.png",
   "./cadavreDrawings/cadavre2.png",
   "./cadavreDrawings/cadavre3.png",
   "./cadavreDrawings/cadavre4.png",
@@ -38,7 +39,10 @@ document.querySelector("#app").innerHTML = `
         </div>
         <div id="images-description">
           <div id="images">
-           <a href="./cadavreDrawings/cadavre2.png" target="_blank">
+          <a href="./cadavreDrawings/cadavre1.png" target="_blank">
+        <img src="./cadavreDrawings/cadavre1.png" alt="Image 1">
+    </a> 
+          <a href="./cadavreDrawings/cadavre2.png" target="_blank">
         <img src="./cadavreDrawings/cadavre2.png" alt="Image 1">
     </a>
     <a href="./cadavreDrawings/cadavre3.png" target="_blank">
