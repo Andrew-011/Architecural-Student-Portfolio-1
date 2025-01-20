@@ -97,15 +97,15 @@ h1 {
 #model3 {
   height: 489.6px;
   width: 316.8px;
-  margin-right: 3em;
+  margin-right: 1em;
   margin-left: 6em;
   border: 1px solid #ccc;
 }
 
 img {
   /* Image dimensions and margin */
-  height: 408px;
-  width: 264px;
+  height: 286px;
+  width: 185px;
   margin: 0.5em;
 }
 
@@ -132,7 +132,7 @@ img {
   justify-content: center; 
   align-items: center;
   height: 2em;
-  width: 95em;
+  width: 80em;
   text-align: center;
   font-weight: 10;
   margin-left: 1em;
@@ -152,28 +152,4 @@ img {
     /* Adjust footer paragraph margin on smaller screens */
     margin: 5px 0;
   }
-}
-/* Base style for zoomable images */
-.zoomable {
-  cursor: pointer;
-  transition: transform 0.3s ease, z-index 0.3s ease;
-  image-rendering: auto; /* Ensure good scaling */
-  image-rendering: crisp-edges; /* Ensures sharper edges during zoom */
-  image-rendering: high-quality; /* Ensures high quality rendering */
-  object-fit: contain; /* Adjust image fit */
-}
-
-/* Zoom effect */
-.zoomable.zoom-in {
-  transform: scale(2); /* Adjust scale as needed */
-  z-index: 1000;
-  position: relative;
-  outline: 2px solid #ffffff; /* Optional: Highlight the zoomed image */
-}
-
-/* Optional: Blur the rest of the page */
-body.zoomed-in {
-  overflow: hidden; /* Prevent scrolling */
-  filter: blur(2px); /* Blur the background when zooming */
-  transition: filter 0.3s ease-in-out;
 }

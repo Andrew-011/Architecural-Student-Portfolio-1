@@ -38,11 +38,21 @@ document.querySelector("#app").innerHTML = `
         </div>
         <div id="images-description">
           <div id="images">
-            ${cadavre
-              .map(
-                (cadavre, index) => `<img src="${cadavre}" alt="cadavre${index + 1}" class="zoomable" />`
-              )
-              .join("")}
+          <a href="./cadavreDrawings/cadavre0.png" target="_blank">
+        <img src="./cadavreDrawings/cadavre0.png" alt="Image 1">
+    </a>
+           <a href="./cadavreDrawings/cadavre2.png" target="_blank">
+        <img src="./cadavreDrawings/cadavre2.png" alt="Image 1">
+    </a>
+    <a href="./cadavreDrawings/cadavre3.png" target="_blank">
+        <img src="./cadavreDrawings/cadavre3.png" alt="Image 2">
+    </a>
+    <a href="./cadavreDrawings/cadavre4.png" target="_blank">
+        <img src="./cadavreDrawings/cadavre4.png" alt="Image 3">
+    </a>
+    <a href="./cadavreDrawings/cadavre5.png" target="_blank">
+        <img src="./cadavreDrawings/cadavre5.png" alt="Image 3">
+    </a>
           </div>
           <h4 id="description">The Afterlife: A Journey of Reflection, Healing, and Unity <br>
         <br>
@@ -103,31 +113,6 @@ document.querySelector("#app").innerHTML = `
   </main>
 `;
 
-// Add event listeners for zoom functionality
-document.addEventListener("DOMContentLoaded", function () {
-  const zoomableImages = document.querySelectorAll(".zoomable");
-
-  zoomableImages.forEach((image) => {
-    image.addEventListener("click", function () {
-      if (this.classList.contains("zoom-in")) {
-        this.classList.remove("zoom-in");
-        document.body.classList.remove("zoomed-in");
-      } else {
-        zoomableImages.forEach((img) => img.classList.remove("zoom-in")); // Reset others
-        this.classList.add("zoom-in");
-        document.body.classList.add("zoomed-in");
-      }
-    });
-  });
-
-  // Close zoom when clicking outside the image
-  document.addEventListener("click", (e) => {
-    if (!e.target.classList.contains("zoomable")) {
-      zoomableImages.forEach((img) => img.classList.remove("zoom-in"));
-      document.body.classList.remove("zoomed-in");
-    }
-  });
-});
 
 // Create three.js scenes for each
 createThreeScene("#model1", "/3DModels/project1/cube.obj");
