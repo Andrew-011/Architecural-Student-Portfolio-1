@@ -38,9 +38,6 @@ document.querySelector("#app").innerHTML = `
         </div>
         <div id="images-description">
           <div id="images">
-          <a href="./cadavreDrawings/cadavre0.png" target="_blank">
-        <img src="./cadavreDrawings/cadavre0.png" alt="Image 1">
-    </a>
            <a href="./cadavreDrawings/cadavre2.png" target="_blank">
         <img src="./cadavreDrawings/cadavre2.png" alt="Image 1">
     </a>
