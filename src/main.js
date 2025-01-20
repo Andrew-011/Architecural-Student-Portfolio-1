@@ -35,7 +35,9 @@ document.querySelector("#app").innerHTML = `
       <div id="project-row">
       Cadavre Exquis
         <div class="three-model">
-          <img src="/cadavreDrawings/cadavre0.png" id="model1" alt="Model 1 Image" />
+          <a href="./cadavreDrawings/cadavre0.png" target="new">
+            <img src="./cadavreDrawings/cadavre0.png" alt="random image" style="width: 316.8px; height: 489.6px;">
+          </a>
         </div>
         <div id="images-description">
           <div id="images">
