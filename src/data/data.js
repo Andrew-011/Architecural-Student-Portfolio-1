@@ -6,8 +6,8 @@ const data = {
     contact: {
         email: "andrewcortado.ac@gmail.com",
         phone: "+1 867 689 7676",
-        linkedin: "https://www.linkedin.com/",
-        github: "https://www.github.com/",
+        linkedin: "https://www.linkedin.com/in/andrew-cortado-569a9b347/",
+        github: "https://github.com/Andrew-011",
     }
 }
 

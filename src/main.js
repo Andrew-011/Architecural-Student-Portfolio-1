@@ -16,6 +16,13 @@ const trees = [
   "./treeDrawings/tree4.jpg",
 ];
 
+const cadavre = [
+  "./cadavreDrawings/cadavre2.png",
+  "./cadavreDrawings/cadavre3.png",
+  "./cadavreDrawings/cadavre4.png",
+  "./cadavreDrawings/cadavre5.png",
+];
+
 document.querySelector("#app").innerHTML = `
   <main id="container">
     <section id="heading">
@@ -25,24 +32,29 @@ document.querySelector("#app").innerHTML = `
 
     <section id="projects">
       <div id="project-row">
-      Model 1
+      Cadavre Exquis
         <div class="three-model">
-          <div id="model1"></div>
+          <img src="/cadavreDrawings/cadavre0.png" id="model1" alt="Model 1 Image" />
         </div>
         <div id="images-description">
           <div id="images">
-            ${cubes
+            ${cadavre
               .map(
-                (cube, index) => `<img src="${cube}" alt="cube${index + 1}" />`
+                (cadavre, index) => `<img src="${cadavre}" alt="cadavre${index + 1}" />`
               )
               .join("")}
           </div>
-          <h4 id="description">A cubic 3D model is a geometric representation of a cube, consisting of six equal square faces joined at right angles. Each edge of the cube is of equal length, forming a symmetrical, rigid structure. The model can be textured, colored, or transparent, and it may include variations such as beveled edges or hollow interiors, depending on its intended purpose in design, animation, or engineering.</h4>
+          <h4 id="description">The Afterlife: A Journey of Reflection, Healing, and Unity <br>
+        <br>
+        In this vision, the afterlife is not a static, final destination but an ongoing, transformative journey where souls experience a process of profound self-realization and deep interconnection with others. Rather than facing judgment or punishment, souls in the afterlife embark on a journey of reflection, healing, and growth—both individually and collectively. This vision proposes that the afterlife is not merely about what we did in life, but about how we evolve and learn to understand ourselves, others, and the greater universe after death. 
+        <br>
+        Upon entering, souls reflect on their lives, gaining clarity about their choices, actions, and their impact on others. Next, they undergo healing, revisiting unresolved conflicts and emotional wounds, allowing for forgiveness, reconciliation, and growth. Souls then connect deeply with others, experiencing shared understanding and learning empathy through collective interactions. Finally, the journey leads to transcending individuality, where souls merge with universal consciousness, embracing unity, compassion, and the interconnectedness of all existence.</h4>
+       
         </div>
       </div>
 
       <div id="project-row">
-      Model 2
+     ${/* Model 2
         <div class="three-model">
           <div id="model2"></div>
         </div>
@@ -58,9 +70,9 @@ document.querySelector("#app").innerHTML = `
           <h4 id="description">A 3D tree model is a geometric representation of a tree, featuring a trunk, branches, and foliage. The trunk is typically cylindrical, with textured bark, while the branches extend outward to support leaves or a canopy. It may include roots or flowers for added detail.</h4>
         </div>
       </div>
-
+*/""}
       <div id="project-row">
-      Model 3
+     ${/* Model 3
         <div class="three-model">
           <div id="model3"></div>
         </div>
@@ -75,6 +87,7 @@ document.querySelector("#app").innerHTML = `
           <h4 id="description">A 3D house model is a geometric representation of a house, featuring walls, a roof, and windows. It often includes additional details such as doors, chimneys, and balconies, with textures like brick, wood, or stucco to enhance realism. The interior may also feature rooms, furniture, and lighting for a more detailed design.</h4>
         </div>
       </div>
+*/""}      
     </section>
 
     <ul id="footer-items">
