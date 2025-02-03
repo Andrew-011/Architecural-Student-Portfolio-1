@@ -24,6 +24,14 @@ const cadavre = [
   "./cadavreDrawings/cadavre5.png",
 ];
 
+const Interop = [
+  "./Interop/Pavilion.png",
+  "./Interop/Torus.png",
+  "./Interop/Olaf.png",
+  "./Interop/Model.png",
+  "./Interop/Reflection.png",
+];
+
 document.querySelector("#app").innerHTML = `
   <main id="container">
     <section id="heading">
@@ -33,6 +41,7 @@ document.querySelector("#app").innerHTML = `
 
     <section id="projects">
       <div id="project-row">
+
       Cadavre Exquis
         <div class="three-model">
           <a href="./cadavreDrawings/cadavre0.png" target="new">
@@ -56,6 +65,7 @@ document.querySelector("#app").innerHTML = `
     <a href="./cadavreDrawings/cadavre5.png" target="_blank">
         <img src="./cadavreDrawings/cadavre5.png" alt="Image 3">
     </a>
+    
           </div>
           <h4 id="description">The Afterlife: A Journey of Reflection, Healing, and Unity <br>
         <br>
@@ -67,23 +77,41 @@ document.querySelector("#app").innerHTML = `
       </div>
 
       <div id="project-row">
-     ${/* Model 2
+
+
+     Interop(erability)
         <div class="three-model">
-          <div id="model2"></div>
+        <div id="model4"></div>
         </div>
+       
         <div id="images-description">
           <div id="images">
-            ${trees
-              .map(
-                (trees, index) =>
-                  `<img src="${trees}" alt="tree${index + 1}" />`
-              )
-              .join("")}
+          <a href="./Interop/Pavilion.png" target="_blank">
+        <img src="./Interop/Pavilion.png" alt="Image 1">
+    </a> 
+          <a href="./Interop/Torus.png" target="_blank">
+        <img src="./Interop/Torus.png" alt="Image 1">
+    </a>
+    <a href="./Interop/Olaf.png" target="_blank">
+        <img src="./Interop/Olaf.png" alt="Image 2">
+    </a>
+    <a href="./Interop/Model.png" target="_blank">
+        <img src="./Interop/Model.png" alt="Image 3">
+    </a>
+    <a href="./Interop/Reflection.png" target="_blank">
+        <img src="./Interop/Reflection.png" alt="Image 3">
+    </a>
+     <a href="./Interop/Photogrammetry.png" target="_blank">
+        <img src="./Interop/Photogrammetry.png" alt="Image 3">
+    </a>
+
           </div>
-          <h4 id="description">A 3D tree model is a geometric representation of a tree, featuring a trunk, branches, and foliage. The trunk is typically cylindrical, with textured bark, while the branches extend outward to support leaves or a canopy. It may include roots or flowers for added detail.</h4>
+          <h4 id="description">The Interop(erability) assignment focused on exploring the compatibility and interaction between different software tools and file formats in 3D modeling. The goal was to understand how various formats (like FBX, OBJ, and STL) handle geometry differently when exported from one program to another, such as from Blender to Rhino. The assignment required us to model objects (like a pavilion, torus, and 3D models), export them in different file formats, and then experiment with converting between meshes, SubD surfaces, and NURBS within Rhino. By doing so, we could observe how these conversions impacted the geometry's smoothness, editability, and suitability for real-world applications, like rendering or fabrication, while gaining insights into the challenges of achieving seamless interoperability across platforms.</h4>
         </div>
       </div>
-*/""}
+
+
+
       <div id="project-row">
      ${/* Model 3
         <div class="three-model">
@@ -120,4 +148,6 @@ document.querySelector("#app").innerHTML = `
 // Create three.js scenes for each
 createThreeScene("#model1", "/3DModels/project1/cube.obj");
 createThreeScene("#model2", "/3DModels/project2/tree.obj");
-createThreeScene("#model3", "/3DModels/project3/cottage.obj");
+createThreeScene("#model3", "/3DModels/project3/cottage.obj");  
+createThreeScene("#model4", "/public/3DModels/project4/OOLaf.obj");
+
